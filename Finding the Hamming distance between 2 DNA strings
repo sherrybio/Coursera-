@@ -1,0 +1,8 @@
+str1 = "CTTGAAGTGGACCTCTAGTTCCTCTACAAAGAACAGGTTGACCTGTCGCGAAG"
+str2 = "ATGCCTTACCTAGATGCAATGACGGACGTATTCCTTTTGCCTCAACGGCTCCT"
+def hamming_distance(str1, str2):
+    if len(str1) != len(str2):
+        raise ValueError("Strand lengths are not equal!")
+    else:
+        return sum(1 for (a, b) in zip(str1, str2) if a != b)
+print(hamming_distance(str1, str2)) 
